@@ -1,21 +1,20 @@
 require 'rails_helper'
 
-RSpec.describe "articles/new", type: :view do
+RSpec.describe 'articles/new', type: :view do
   before(:each) do
     assign(:article, Article.new(
-      :title => "MyText",
-      :content => "MyText"
+                       title: 'MyText',
+                       content: 'MyText'
     ))
   end
 
-  it "renders new article form" do
+  it 'renders new article form' do
     render
 
-    assert_select "form[action=?][method=?]", articles_path, "post" do
+    assert_select 'form[action=?][method=?]', articles_path, 'post' do
+      assert_select 'textarea#article_title[name=?]', 'article[title]'
 
-      assert_select "textarea#article_title[name=?]", "article[title]"
-
-      assert_select "textarea#article_content[name=?]", "article[content]"
+      assert_select 'textarea#article_content[name=?]', 'article[content]'
     end
   end
 end
