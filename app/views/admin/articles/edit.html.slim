@@ -1,0 +1,12 @@
+.row
+  hr
+  .large-12.columns
+
+    h4 Editing article
+
+    == render 'form'
+
+    = link_to 'Show', admin_article_path(@article)
+    '|
+    = link_to 'Back', admin_articles_path
+

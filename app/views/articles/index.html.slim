@@ -1,23 +1,12 @@
-h1 Listing articles
+.row
+  hr
+  .large-12.columns
 
-table
-  thead
-    tr
-      th Title
-      th Content
-      th
-      th
-      th
+    - for article in @articles do
 
-  tbody
-    - @articles.each do |article|
-      tr
-        td = article.title
-        td = article.content
-        td = link_to 'Show', article
-        td = link_to 'Edit', edit_article_path(article)
-        td = link_to 'Destroy', article, data: {:confirm => 'Are you sure?'}, :method => :delete
+      h4 = link_to article.title, article
+      p = article.content
+      p = l(article.updated_at)
 
-br
-
-= link_to 'New Article', new_article_path
+      - if article != @articles.last
+        hr

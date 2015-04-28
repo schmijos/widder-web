@@ -1,10 +1,10 @@
 doctype html
-html lang="en"
+html lang = I18n.locale
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     title
-      = content_for?(:title) ? yield(:title) : "foundation-rails"
+      = content_for?(:title) ? yield(:title) : "Metzgerei Widder"
 
     = stylesheet_link_tag    'application'
     = javascript_include_tag 'vendor/modernizr'
@@ -20,45 +20,13 @@ html lang="en"
         .nav-bar
           ul.button-group
             li
-              a.button href="#about" Idee
+              a.button href="/#contact" Kontakt
             li
-              a.button href="#work" Auswahl
+              a.button href="/#about" Idee
             li
-              a.button href="#contact" Kontakt
+              a.button href="/articles" Aktuell
 
-    .hero
-      .row
-        .large-12.columns.intro-text
-          p
-            | Werte Gesellschaft,
-            br
-            | Ihr Fleischfachmann präsentiert
-
-    #about.row.about
-      .medium-6.large-8.columns
-        h4 Die Idee
-        p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.
-      .medium-6.large-4.columns
-        img src="https://x2.xingassets.com/image/4_4_6_c41fb9b15_21797841_1/matthias-kilchsperger-foto.1024x1024.jpg"
-
-    #work.row.work
-      hr
-      .large-12.columns
-        h4 Auswahl
-        p Folgende Produkte lassen sich bei mir bestellen
-        ul.clearing-thumbs.small-block-grid-1.medium-block-grid-2.large-block-grid-4 data-clearing=""
-          li
-            a href="http://placehold.it/550x300"
-              img data-caption=("caption here") src="http://dietfooddelivery.biz/wp-content/uploads/2014/06/cooked-meat.jpg"
-          li
-            a href="http://placehold.it/550x300"
-              img data-caption=("caption 2 here...") src="http://static.ddmcdn.com/gif/blogs/6a00d8341bf67c53ef015392ebc8e6970b-800wi.jpg"
-          li
-            a href="http://placehold.it/550x300"
-              img data-caption=("caption 3 here...") src="http://wendall.org/omnivorous-bear/wp-content/uploads/2010/09/Marrow-soup-cheese-scones-red-cooked-beef-191.jpg"
-          li
-            a href="http://placehold.it/550x300"
-              img data-caption=("caption 4 here...") src="http://conversation.which.co.uk/wp-content/uploads/2012/07/delicious-sausages.jpg"
+    = yield
 
     #contact.row.contact
       hr
@@ -87,5 +55,3 @@ html lang="en"
                 a href="#" AGB
               li
                 a href="#" Newsletter
-
-    script src="js/foundation/foundation.clearing.js"

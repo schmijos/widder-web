@@ -1,8 +1,15 @@
-.row
-  .large-12
+#about.row.about
+  .medium-6.large-8.columns
+    h4 Die Vision
+    p Slider mit 3 Statements
+  .medium-6.large-4.columns
+    img src="https://x2.xingassets.com/image/4_4_6_c41fb9b15_21797841_1/matthias-kilchsperger-foto.1024x1024.jpg"
 
-    h1 Willkommen bei der Metzgerei Widder
-
-    p Hier alles online kaufen
-
-    p Und auch sonst voll
+#work.row.work
+  hr
+  .large-12.columns
+    h4
+      strong Aktuell:
+      = " #{@newest_article.title}"
+    p = @newest_article.content
+    p = l(@newest_article.updated_at)

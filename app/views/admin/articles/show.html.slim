@@ -1,0 +1,13 @@
+.row
+  hr
+  .large-12.columns
+
+    p#notice = notice
+
+    h4 = @article.title
+    p = @article.content
+    p = l(article.updated_at)
+
+    = link_to 'Edit', edit_admin_article_path(@article)
+    '|
+    = link_to 'Back', admin_articles_path

@@ -1,0 +1,29 @@
+.row
+  hr
+  .large-12.columns
+
+    h4 Blogeinträge
+
+    table
+      thead
+        tr
+          th Title
+          th Content
+          th Updated At
+          th
+          th
+          th
+
+      tbody
+        - for article in @articles do
+          tr
+            td = article.title
+            td = article.content
+            td = l(article.updated_at)
+            td = link_to 'Show', admin_article_path(article)
+            td = link_to 'Edit', edit_admin_article_path(article)
+            td = link_to 'Destroy', admin_article_path(article), data: {:confirm => 'Are you sure?'}, :method => :delete
+
+    br
+
+    = link_to 'New Article', new_admin_article_path
