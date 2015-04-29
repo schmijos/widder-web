@@ -1,6 +1,7 @@
 .row
   hr
-  .large-12.columns
+
+  .large-9.columns
 
     - for article in @articles do
 
@@ -10,3 +11,8 @@
 
       - if article != @articles.last
         hr
+
+  .large-3.columns
+    ul
+      - for article in @articles do
+        li = link_to article.title, article
