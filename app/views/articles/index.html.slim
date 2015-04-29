@@ -13,6 +13,11 @@
         hr
 
   .large-3.columns
+    p
+      form
+        input type="text" name="q" placeholder="suchen..."
+        input type="submit"
+
     ul
       - for article in @articles do
         li = link_to article.title, article

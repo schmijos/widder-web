@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   def index
     @articles = Article.all
+    @articles = @articles.quick_search(params[:q]) if params[:q].present?
   end
 
   # GET /articles/1
