@@ -1,0 +1,12 @@
+.row
+  hr
+  .large-12.columns
+
+    p#notice = notice
+
+    p = @vision.content
+    p = l(@vision.updated_at)
+
+    = link_to 'Edit', edit_admin_vision_path(@vision)
+    '|
+    = link_to 'Back', admin_visions_path

@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :articles
+    resources :visions
   end
 
   resources :articles, only: [:index, :show]
+  resources :visions, only: [:index]
+
   root 'home#index'
+  get 'visions' => 'home#visions'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

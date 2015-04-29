@@ -1,0 +1,12 @@
+.row
+  hr
+  .large-12.columns
+
+    h4 Editing vision
+
+    == render 'form'
+
+    = link_to 'Show', admin_vision_path(@vision)
+    '|
+    = link_to 'Back', admin_visions_path
+

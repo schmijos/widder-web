@@ -1,0 +1,10 @@
+.row
+  hr
+
+  .large-12.columns
+
+    - for vision in @visions do
+      p = vision.content
+
+      - if vision != @visions.last
+        hr

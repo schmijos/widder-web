@@ -1,0 +1,27 @@
+.row
+  hr
+  .large-12.columns
+
+    h4 Ideen
+
+    table
+      thead
+        tr
+          th Content
+          th Updated At
+          th
+          th
+          th
+
+      tbody
+        - for vision in @visions do
+          tr
+            td = vision.content
+            td = l(vision.updated_at)
+            td = link_to 'Show', admin_vision_path(vision)
+            td = link_to 'Edit', edit_admin_vision_path(vision)
+            td = link_to 'Destroy', admin_vision_path(vision), data: {:confirm => 'Are you sure?'}, :method => :delete
+
+    br
+
+    = link_to 'New Vision', new_admin_vision_path
