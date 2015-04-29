@@ -1,11 +1,13 @@
-#about.row.about
-  .medium-6.large-8.columns
-    h4 Die Vision
-    p = @visions.sample.content
-  .medium-6.large-4.columns
-    img src="https://x2.xingassets.com/image/4_4_6_c41fb9b15_21797841_1/matthias-kilchsperger-foto.1024x1024.jpg"
+#about.row
+  .large-12.columns
+    #vision-slider
+      - for vision in @visions
+        div
+          blockquote
+            = vision.content
+            cite Matthias Kilchsperger
 
-#work.row.work
+#work.row
   hr
   .large-12.columns
     h4
