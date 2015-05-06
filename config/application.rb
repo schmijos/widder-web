@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module WidderWeb
   class Application < Rails::Application
     config.time_zone = 'Bern'
-    config.i18n.default_locale = :de
+    config.i18n.default_locale = :'de-CH'
 
     config.active_record.raise_in_transactional_callbacks = true
 
