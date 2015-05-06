@@ -82,4 +82,4 @@ production:
   <<: *default
   database: widder-web_production
   username: widder-web
-  password: <%= ENV['WIDDER-WEB_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>

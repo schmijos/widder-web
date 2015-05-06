@@ -54,6 +54,6 @@ class Admin::VisionsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def vision_params
-    params.require(:vision).permit(:title, :content)
+    params.require(:vision).permit(:content, :image_id)
   end
 end

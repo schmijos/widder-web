@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150429162522) do
 
   create_table "visions", force: :cascade do |t|
     t.text     "content"
+    t.string   "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -14,8 +14,11 @@ gem 'slim-rails'
 
 gem 'foundation-rails'
 gem 'jquery-rails'
-
 gem 'uglifier', '>= 1.3.0'
+
+gem 'cloudinary'
+
+gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
