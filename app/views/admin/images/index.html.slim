@@ -1,0 +1,27 @@
+.row
+  hr
+  .large-12.columns
+
+    h4 Ideen
+
+    table
+      thead
+        tr
+          th Caption
+          th Updated At
+          th
+          th
+          th
+
+      tbody
+        - for image in @images do
+          tr
+            td = image.caption
+            td = l(image.updated_at)
+            td = link_to 'Show', admin_image_path(image)
+            td = link_to 'Edit', edit_admin_image_path(image)
+            td = link_to 'Destroy', admin_image_path(image), data: {:confirm => 'Are you sure?'}, :method => :delete
+
+    br
+
+    = link_to 'New Image', new_admin_image_path

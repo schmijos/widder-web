@@ -9,24 +9,6 @@
   .field
     = f.label :content
     = f.text_area :content, rows: 5
-    - if @vision.image_id
-      = cl_image_tag @vision.image_id, secure: true, height: 80
-    = cl_image_upload_tag 'vision[image_id]'
+    = f.collection_select :image_id, Image.all, :id, :caption
 
   .actions = f.submit
-
-== cloudinary_js_config
-
-javascript:
-  $(function() {
-    $('.cloudinary-fileupload').bind('cloudinarydone', function (e, data) {
-      $('.preview').html(
-              $.cloudinary.image(data.result.public_id,
-                      {
-                        format: data.result.format, version: data.result.version,
-                        crop: 'fill', width: 150, height: 100
-                      })
-      );
-      return true;
-    });
-  });

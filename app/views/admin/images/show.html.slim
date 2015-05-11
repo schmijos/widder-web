@@ -1,0 +1,12 @@
+.row
+  hr
+  .large-12.columns
+
+    p#notice = notice
+
+    p = @image.caption
+    p = l(@image.updated_at)
+
+    = link_to 'Edit', edit_admin_image_path(@image)
+    '|
+    = link_to 'Back', admin_images_path
