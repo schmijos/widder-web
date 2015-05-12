@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150511161507) do
   end
 
   create_table "visions", force: :cascade do |t|
+    t.text     "caption"
     t.text     "content"
     t.string   "image_url"
     t.datetime "created_at", null: false

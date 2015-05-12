@@ -6,6 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Article.create title: 'First Article', content: 'This is the first content'
-Vision.create content: 'First Vision'
+Article.create title: 'First Article', content: 'This is the first article content'
+Vision.create caption: 'First Vision', content: 'This is the first vision content'
 Image.create caption: 'Lulz Image', image_id: 'https://placehold.it/120x120'

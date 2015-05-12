@@ -1,6 +1,7 @@
 class CreateVisions < ActiveRecord::Migration
   def change
     create_table :visions do |t|
+      t.text :caption
       t.text :content
       t.string :image_url
 

@@ -2,9 +2,19 @@
   hr
 
   .large-12.columns
-
     - for vision in @visions do
-      p = vision.content
+      .row
+        .large-4.columns
+          img src="https://www.schweizerfleisch.ch/filemount/schweizerfleisch/rezepte_zubereitungsarten_H.jpg"
+
+        .large-8.columns
+          blockquote
+            = vision.caption
+            cite Matthias Kilchsperger
+            
+          p = vision.content
 
       - if vision != @visions.last
-        hr
+        .row
+          .large-12.columns
+            hr

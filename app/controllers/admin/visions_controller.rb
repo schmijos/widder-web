@@ -55,7 +55,7 @@ module Admin
 
     # Only allow a trusted parameter "white list" through.
     def vision_params
-      params.require(:vision).permit(:content, :image_id)
+      params.require(:vision).permit(:caption, :content, :image_id)
     end
   end
 end

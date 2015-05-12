@@ -8,6 +8,7 @@
 
   .field
     = f.label :content
+    = f.text_area :caption, rows: 5
     = f.text_area :content, rows: 5
     = f.collection_select :image_id, Image.all, :id, :caption
 
