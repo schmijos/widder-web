@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :articles, only: [:index, :show]
+  resources :images, only: [:show], format: :png, constraints: {format: 'png'}
   resources :visions, only: [:index]
 
   root 'home#index'

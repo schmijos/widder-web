@@ -8,3 +8,4 @@
 
 Article.create title: 'First Article', content: 'This is the first content'
 Vision.create content: 'First Vision'
+Image.create caption: 'Lulz Image', image_id: 'https://placehold.it/120x120'
