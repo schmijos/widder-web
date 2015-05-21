@@ -14,5 +14,5 @@
     h4
       strong Aktuell:
       = " #{@newest_article.title}"
-    p = @newest_article.content
+    = markdown(@newest_article.content).html_safe
     p = l(@newest_article.updated_at)

@@ -5,5 +5,5 @@
     p#notice = notice
 
     h4 = @article.title
-    p = @article.content
+    = markdown(@article.content).html_safe
     p = l(@article.updated_at)

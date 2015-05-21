@@ -9,8 +9,9 @@ gem 'pg'
 gem 'pg_search'
 
 gem 'sass-rails', '~> 5.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.1'
 gem 'slim-rails'
+gem 'redcarpet'
 
 gem 'foundation-rails'
 gem 'jquery-rails'

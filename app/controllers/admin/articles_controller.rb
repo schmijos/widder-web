@@ -34,7 +34,7 @@ module Admin
     # PATCH/PUT /articles/1
     def update
       if @article.update(article_params)
-        redirect_to admin_articles_url, notice: 'Article was successfully updated.'
+        redirect_to edit_admin_article_path(@article), notice: 'Article was successfully updated.'
       else
         render :edit
       end
