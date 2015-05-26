@@ -1,3 +1,6 @@
+ADMIN_NAME: "admin"
+ADMIN_PASS: "secret"
+
 CLOUDINARY_CLOUD_NAME: "metzgerei-widder"
 CLOUDINARY_API_KEY: "samplekey"
 CLOUDINARY_API_SECRET: "samplesecret"
