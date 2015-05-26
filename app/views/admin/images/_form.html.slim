@@ -14,8 +14,9 @@
       .large-6.columns
         .panel.radius
           h5 Current Image:
+          p Url: #{cloudinary_url(@image.image_id, secure: true)}
           - if @image.image_id
-            = cl_image_tag @image.image_id, secure: true, height: 80
+            = cl_image_tag @image.image_id, secure: true
 
       .large-6.columns
         .panel.radius

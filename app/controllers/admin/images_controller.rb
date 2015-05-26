@@ -55,7 +55,16 @@ module Admin
 
     # Only allow a trusted parameter "white list" through.
     def image_params
-      params.require(:image).permit(:content, :image_id)
+      h = params.require(:image).permit(:content, :image_id)
+      if params[:image][:image_id].present?
+        preloaded = Cloudinary::PreloadedFile.new(params[:image][:image_id])
+        if preloaded.valid?
+          h[:image_id] = preloaded.identifier
+        else
+          throw StandardError.new('Image could not be signed.')
+        end
+      end
+      h
     end
   end
 end
