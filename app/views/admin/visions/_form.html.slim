@@ -10,6 +10,6 @@
     = f.label :content
     = f.text_area :caption, rows: 5
     = f.text_area :content, rows: 5
-    = f.collection_select :image_id, Image.all, :id, :caption
+    = f.collection_select :image_url, Image.all, :id, :caption
 
   .actions = f.submit
