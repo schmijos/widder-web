@@ -15,4 +15,4 @@
       strong Aktuell:
       = " #{@newest_article.title}"
     = markdown(@newest_article.content).html_safe
-    p = l(@newest_article.updated_at)
+    p = l(@newest_article.created_at)

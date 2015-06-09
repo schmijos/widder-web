@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @articles = @articles.quick_search(params[:q]) if params[:q].present?
+    @articles = @articles.order(created_at: :desc)
   end
 
   # GET /articles/1

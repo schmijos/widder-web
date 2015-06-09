@@ -7,8 +7,9 @@
           li = message
 
   .field
+    = f.label :caption
+    = f.text_field :caption
     = f.label :content
-    = f.text_area :caption, rows: 5
     = f.text_area :content, rows: 5
     = f.collection_select :image_url, Image.all, :id, :caption
 
