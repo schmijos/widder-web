@@ -17,17 +17,32 @@ html lang = I18n.locale
 
     .row
       .large-12.columns
-        .wrapper style="background-color: rgb(139, 15, 15); height: 80px; margin-bottom: 5px;"
-          .left
-            h1 style="font-family: Seravek, sans-serif; font-weight: lighter;"
-              a href = root_path
-                = image_tag('logo_64.png', style: 'margin-left: 7px;')
-                span style="margin: 20px; color: white;" Metzgerei Widder
 
-          .right style="padding: 7px 0;"
-            a.button style="padding: 23px; margin: 0 8px;" href="/#contact" Kontakt
-            a.button style="padding: 23px; margin: 0 8px;" href="/#about" Idee
-            a.button style="padding: 23px; margin: 0 8px;" href="/articles" Aktuell
+        nav.top-bar data-topbar="" role="navigation" style="margin-bottom: 8px;"
+          ul.title-area
+            li.name
+              h1
+                a href="#"
+                  = image_tag 'logo_32.png', style: 'margin-right: 8px;'
+                  | Metzgerei Widder
+            li.toggle-topbar.menu-icon
+              a href="#"
+                span Menu
+
+          section.top-bar-section
+            / Right Nav Section
+            ul.right
+              li
+                a href="/#contact" Kontakt
+              li
+                a href="/visions/" Idee
+              li
+                a href="/articles/" Aktuell
+
+
+
+
+
 
     = yield
 
